@@ -12,10 +12,10 @@
 #include <ArduinoJson.h>
 #include <Wire.h>
 
-const char* ssid = "RedmiAreeb";
-const char* password = "244466666";
-String chatId = "941672516";
-String BOTtoken = "1744384958:AAGZ0FhLj7kkfIxfCMjw6_ZrllYvu9P4ypY";
+const char* ssid = "###########";
+const char* password = "###########";
+String chatId = "############";
+String BOTtoken = "#############";
 
 bool sendPhoto = false;
 
