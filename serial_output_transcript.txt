@@ -1,0 +1,113 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+flash read err, 1000
+ets_main.c 371 
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0018,len:4
+load:0x3fff001c,len:1216
+ho 0 tail 12 room 4
+load:0x40078000,len:10944
+load:0x40080400,len:6388
+entry 0x400806b4
+
+Connecting to RedmiAreeb
+.....
+WiFi Connected
+
+ESP32 CAM IP Address: 192.168.43.221
+got response
+
+Handle New Messages: 1
+/wake_up
+got response
+Handle New Messages: 1
+/getstatus
+got response
+Handle New Messages: 1
+/blink
+got response
+Handle New Messages: 1
+/readtemp
+Temperature Request
+Temperature: 
+29.63 ºC 
+85.32 ºF 
+
+got response
+Handle New Messages: 1
+/capture
+New photo request
+Capturing Photo
+Connect to api.telegram.org
+Connection successful
+.........{"ok":true,"result":{"message_id":299,"from":{"id":1744384958,"is_bot":true,"first_name":"Jarvis","username":"jarvis_esp32_bot"},"chat":{"id":941672516,"first_name":"S","last_name":"A","type":"private"},"date":1626109173,"photo":[{"file_id":"AgACAgUAAxkDAAIBK2DsdPVuaI2-RJvCsFmwTgdoRahAAAKArjEb1uhhVwVdKKOyq2WzAQADAgADcwADIAQ","file_unique_id":"AQADgK4xG9boYVd4","file_size":759,"width":90,"height":67},{"file_id":"AgACAgUAAxkDAAIBK2DsdPVuaI2-RJvCsFmwTgdoRahAAAKArjEb1uhhVwVdKKOyq2WzAQADAgADeAADIAQ","file_unique_id":"AQADgK4xG9boYVd9","file_size":8417,"width":400,"height":296},{"file_id":"AgACAgUAAxkDAAIBK2DsdPVuaI2-RJvCsFmwTgdoRahAAAKArjEb1uhhVwVdKKOyq2WzAQADAgADbQADIAQ","file_unique_id":"AQADgK4xG9boYVdy","file_size":9330,"width":320,"height":237}]}}
+got response
+Handle New Messages: 1
+/flashclick
+New flash-photo request
+Capturing Photo
+Connect to api.telegram.org
+Connection successful
+.........{"ok":true,"result":{"message_id":301,"from":{"id":1744384958,"is_bot":true,"first_name":"Jarvis","username":"jarvis_esp32_bot"},"chat":{"id":941672516,"first_name":"S","last_name":"A","type":"private"},"date":1626109191,"photo":[{"file_id":"AgACAgUAAxkDAAIBLWDsdQdpzthz2ULqmezL7sny3a5gAAKBrjEb1uhhV4VHGAmWnUW6AQADAgADcwADIAQ","file_unique_id":"AQADga4xG9boYVd4","file_size":762,"width":90,"height":67},{"file_id":"AgACAgUAAxkDAAIBLWDsdQdpzthz2ULqmezL7sny3a5gAAKBrjEb1uhhV4VHGAmWnUW6AQADAgADeAADIAQ","file_unique_id":"AQADga4xG9boYVd9","file_size":6963,"width":400,"height":296},{"file_id":"AgACAgUAAxkDAAIBLWDsdQdpzthz2ULqmezL7sny3a5gAAKBrjEb1uhhV4VHGAmWnUW6AQADAgADbQADIAQ","file_unique_id":"AQADga4xG9boYVdy","file_size":8308,"width":320,"height":237}]}}
+got response
+Handle New Messages: 1
+/capture
+New photo request
+Capturing Photo
+Connect to api.telegram.org
+Connection successful
+...........{"ok":true,"result":{"message_id":311,"from":{"id":1744384958,"is_bot":true,"first_name":"Jarvis","username":"jarvis_esp32_bot"},"chat":{"id":941672516,"first_name":"S","last_name":"A","type":"private"},"date":1626109460,"photo":[{"file_id":"AgACAgUAAxkDAAIBN2DsdhR5YeivUe_VdqmtMlaABeKBAAKGrjEb1uhhV5QEs0JTvLc_AQADAgADcwADIAQ","file_unique_id":"AQADhq4xG9boYVd4","file_size":957,"width":90,"height":67},{"file_id":"AgACAgUAAxkDAAIBN2DsdhR5YeivUe_VdqmtMlaABeKBAAKGrjEb1uhhV5QEs0JTvLc_AQADAgADeAADIAQ","file_unique_id":"AQADhq4xG9boYVd9","file_size":11925,"width":400,"height":296},{"file_id":"AgACAgUAAxkDAAIBN2DsdhR5YeivUe_VdqmtMlaABeKBAAKGrjEb1uhhV5QEs0JTvLc_AQADAgADbQADIAQ","file_unique_id":"AQADhq4xG9boYVdy","file_size":13439,"width":320,"height":237}]}}
+got response
+Handle New Messages: 1
+/lightup
+Relay 1 -> High
+got response
+Handle New Messages: 1
+/capture
+New photo request
+Capturing Photo
+Connect to api.telegram.org
+Connection successful
+.........{"ok":true,"result":{"message_id":315,"from":{"id":1744384958,"is_bot":true,"first_name":"Jarvis","username":"jarvis_esp32_bot"},"chat":{"id":941672516,"first_name":"S","last_name":"A","type":"private"},"date":1626109500,"photo":[{"file_id":"AgACAgUAAxkDAAIBO2DsdjwFJ7y5DNlNn864bhLdxtZKAAKHrjEb1uhhV7-4frID6btkAQADAgADcwADIAQ","file_unique_id":"AQADh64xG9boYVd4","file_size":1194,"width":90,"height":67},{"file_id":"AgACAgUAAxkDAAIBO2DsdjwFJ7y5DNlNn864bhLdxtZKAAKHrjEb1uhhV7-4frID6btkAQADAgADeAADIAQ","file_unique_id":"AQADh64xG9boYVd9","file_size":11841,"width":400,"height":296},{"file_id":"AgACAgUAAxkDAAIBO2DsdjwFJ7y5DNlNn864bhLdxtZKAAKHrjEb1uhhV7-4frID6btkAQADAgADbQADIAQ","file_unique_id":"AQADh64xG9boYVdy","file_size":14471,"width":320,"height":237}]}}
+got response
+Handle New Messages: 1
+/lightout
+Relay 1 -> Low
+got response
+Handle New Messages: 1
+/readtemp
+Temperature Request
+Temperature: 
+29.56 ºC 
+85.21 ºF 
+
+got response
+Handle New Messages: 1
+/fanon
+Relay 2 -> High
+got response
+Handle New Messages: 1
+/readtemp
+Temperature Request
+Temperature: 
+29.19 ºC 
+84.54 ºF 
+
+got response
+Handle New Messages: 1
+/fanoff
+Relay 2 -> Low
+got response
+Handle New Messages: 1
+/readtemp
+Temperature Request
+Temperature: 
+28.94 ºC 
+84.09 ºF 
+
