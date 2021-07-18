@@ -61,11 +61,13 @@ String sendPhotoTelegram();
 OneWire oneWire(ONE_WIRE_BUS);
 DallasTemperature sensors(&oneWire);
 float Celcius = 0;
+float Farenheit = 0;
 
 String getReadings(){
   sensors.requestTemperatures(); 
   Celcius = sensors.getTempCByIndex(0);
-  String message = "Temperature: " + String(Celcius) + " ºC \n";
+  Farenheit = sensors.getTempFByIndex(0);
+  String message = "Temperature: \n" + String(Celcius) + " ºC \n" + String(Farenheit) + " ºF \n";
   return message;
 }
 
@@ -198,7 +200,7 @@ String sendPhotoTelegram(){
     clientTCP.println("POST /bot"+BOTtoken+"/sendPhoto HTTP/1.1");
     clientTCP.println("Host: " + String(myDomain));
     clientTCP.println("Content-Length: " + String(totalLen));
-    clientTCP.println("Content-Type: multipart/form-data; boundary=RandomNerdTutorials");
+    clientTCP.println("Content-Type: multipart/form-data; boundary=ProjectJarvis");
     clientTCP.println();
     clientTCP.print(head);
   
@@ -287,14 +289,26 @@ void handleNewMessages(int numNewMessages){
       sendPhoto = true;
       Serial.println("New photo request");
     }
-    if (text == "/lightup")
+    if (text == "/LightUp"){
       digitalWrite(RELAY_1, HIGH);
-    if (text == "/lightout")
+      Serial.println("Relay 1 -> High");
+      bot.sendMessage(chatId, "Lamp turned on!", "Markdown");
+    }
+    if (text == "/LightOut"){
       digitalWrite(RELAY_1, LOW);
-    if (text == "/fanon")
+      Serial.println("Relay 1 -> Low");
+      bot.sendMessage(chatId, "Lamp turned off!", "Markdown");
+    }
+    if (text == "/FanOn"){
       digitalWrite(RELAY_2, HIGH);
-    if (text == "/fanoff")
+      Serial.println("Relay 2 -> High");
+      bot.sendMessage(chatId, "Fan turned on!", "Markdown");
+    }
+    if (text == "/FanOff"){
       digitalWrite(RELAY_2, LOW);
+      Serial.println("Relay 2 -> Low");
+      bot.sendMessage(chatId, "Fan turned off!", "Markdown");
+    }
     if (text == "/getstatus"){
       String conn_stat;
       if (WiFi.status() == WL_CONNECTED)
@@ -303,7 +317,9 @@ void handleNewMessages(int numNewMessages){
       bot.sendMessage(chatId, conn_stat, "Markdown");
     }
     if (text == "/readtemp"){
+      Serial.println("Temperature Request");
       String readings = getReadings();
+      Serial.println(readings);
       bot.sendMessage(chatId, readings, "");
     }
     if ((text == "/wake_up") || (text == "/start")){
@@ -314,10 +330,10 @@ void handleNewMessages(int numNewMessages){
       welcome += "/capture : _takes a new photo_\n";
       welcome += "/flashclick : _toggle flash LED while taking a new photo_\n";
       welcome += "/readtemp : _request latest temperature sensor reading_\n";
-      welcome += "/lightup : _turn on lamp_\n";
-      welcome += "/lightout : _turn off lamp_\n";
-      welcome += "/fanon : _turn on fan_\n";
-      welcome += "/fanoff : _turn off fan_\n\n";
+      welcome += "/LightUp : _turn on lamp_\n";
+      welcome += "/LightOut : _turn off lamp_\n";
+      welcome += "/FanOn : _turn on fan_\n";
+      welcome += "/FanOff : _turn off fan_\n\n";
       welcome += "Enter your command.\n";
       bot.sendMessage(chatId, welcome, "Markdown");
     }
