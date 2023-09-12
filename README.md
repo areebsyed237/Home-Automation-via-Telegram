@@ -12,3 +12,28 @@ Further modifications can be added to include _PIR Sensor_ triggered photo captu
 * 12V DC Adapter
 * LED & Resistors (1k & 4.7k ohm)
 * Breadboard & Jumper Wires
+
+### Circuit Diagram & Setup
+<table style="margin: 0 auto;">
+  <tr>
+    <td>
+        <img src="jarvis_schematic.png" alt="schematic" width="500"/>
+        <p style="font-size: 14px; text-align: center;"> Circuit Schematic Diagram  </p>
+    </td>
+    <td style="font-size: 32px; text-align: center; vertical-align: middle;">&rarr;</td>
+    <td>
+        <img src="project_setup.jpg" alt="setup" width="312"/>
+        <p style="font-size: 14px; text-align: center;"> Actual Setup </p>
+    </td>
+  </tr>
+</table>
+
+### Telegram Integration
+<table style="margin: 0 auto;">
+  <tr>
+    <td><img src="Screenshots/001.jpg" alt="img1" width="200"/></td>
+    <td><img src="Screenshots/002.jpg" alt="img2" width="200"/></td>
+    <td><img src="Screenshots/003.jpg" alt="img3" width="200"/></td>
+    <td><img src="Screenshots/004.jpg" alt="img4" width="200"/></td>
+  </tr>
+  </table>
